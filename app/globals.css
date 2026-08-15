@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fdf7ee;
+  color: #5a4a40;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20;
+  }
+
+  .heading-en {
+    @apply font-maru font-bold tracking-wide;
+  }
+
+  .card {
+    @apply rounded-xl2 bg-white/80 p-6 shadow-soft ring-1 ring-black/5 backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-pink px-8 py-3 font-maru font-bold text-white shadow-soft transition hover:bg-pink-deep hover:shadow-card focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-soft;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-maru font-bold text-pink-deep ring-1 ring-pink transition hover:bg-pink-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-soft;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-4 py-1 text-sm font-bold;
+  }
+
+  .field-label {
+    @apply mb-1.5 block font-maru font-bold text-textbrown;
+  }
+
+  .field-input {
+    @apply w-full rounded-xl2 border-0 bg-white px-4 py-3 text-textbrown shadow-soft ring-1 ring-black/5 placeholder:text-textbrown-muted/60 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-soft;
+  }
+}
+
+/* 縦方向の波形装飾（HOME ヒーロー下などに使用） */
+.wave-divider {
+  background-image: radial-gradient(
+    circle at 10% 50%,
+    rgba(242, 166, 180, 0.15) 0,
+    transparent 40%
+  );
+}
